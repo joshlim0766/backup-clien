@@ -183,18 +183,20 @@ const login = async (userId, userPassword) => {
 
 const backupMyArticle = async (clienCookie) => {
     const myArticleList = await getMyArticleList(Array.from(clienCookie.keys()).map(key => `${key}=${clienCookie.get(key)}`).join('; '), 'articles', 'title');
-    const myCommentList = await getMyArticleList(Array.from(clienCookie.keys()).map(key => `${key}=${clienCookie.get(key)}`).join('; '), 'comments', 'undefined');
+    //const myCommentList = await getMyArticleList(Array.from(clienCookie.keys()).map(key => `${key}=${clienCookie.get(key)}`).join('; '), 'comments', 'undefined');
 
     console.log(myArticleList);
-    console.log(myCommentList);
+    //console.log(myCommentList);
 
     myArticleList.forEach((article) => {
         crawlPost(article.url);
     });
 
+    /*
     myCommentList.forEach((comment) => {
         crawlPost(comment.url);
     })
+     */
 };
 
 login().then(() => {
