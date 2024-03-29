@@ -1,0 +1,19 @@
+{
+  "name": "clien-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "querystring": "^0.2.0",
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^8.0.0",
+    "moment-timezone": "^0.5.45"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
